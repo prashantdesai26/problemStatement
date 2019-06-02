@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="0" name="Check all Tests">
+<listeners>
+		<listener class-name="com.utilities.TestListener" />
+	</listeners>
+  <test name="Accordion Collapse check">
+    <classes>
+  	<class name = "testsValidation.Accordion"/>
+  	<methods>
+  	<include name = "clickAccordionlink" />
+  	<include name = "checkAccordianCollapse" />
+  	</methods>
+  </classes>
+  </test> <!-- Accordion_Navigation_check -->
+  
+   <test name="Accordion Text Presence check under the collapse">
+    <classes>
+  	<class name = "testsValidation.Accordion"/>
+  	<methods>
+  	<include name = "clickAccordionlink" />
+  	<include name = "checkAccordionText" />
+  	</methods>
+  </classes>
+  </test> <!-- Accordion_Navigation_check -->
+  
+  <test name="Accordion do not collapse on second click">
+    <classes>
+  	<class name = "testsValidation.Accordion"/>
+  	<methods>
+  	<include name = "clickAccordionlink" />
+  	<include name = "checkAccordionDoNotCloseOnreclicking" />
+  	</methods>
+  </classes>
+  </test> <!-- Accordion_Navigation_check -->  
+
+  <test name="Check presence of Selectable blocks">
+    <classes>
+      <class name="testsValidation.Selectable"/>
+      <methods>
+      <include name = "clickSelectablelink" />
+      <include name = "checkSelectableBlock" />
+      </methods>
+    </classes>
+  </test> 
+  
+   <test name="Check all the blocks are selectable">
+    <classes>
+      <class name="testsValidation.Selectable"/>
+      <methods>
+      <include name = "clickSelectablelink" />
+      <include name = "checkBlockSelectable" />
+      </methods>
+    </classes>
+  </test> 
+  
+   <test name="Check all the blocks are selectable together">
+    <classes>
+      <class name="testsValidation.Selectable"/>
+      <methods>
+      <include name = "clickSelectablelink" />
+      <include name = "selectMultipleBlock" />
+      </methods>
+    </classes>
+  </test> 
+
+  <test name="Check the dataPicker TextBox is Present">
+    <classes>
+      <class name="testsValidation.Datepicker"/>
+      <methods>
+      <include name = "clickDatePickerlink" />
+      <include name = "clickdateselectorbox" />
+      </methods>
+    </classes>
+  </test>
+  
+  <test name="Check calender grid appears on clicking the date picker box">
+    <classes>
+      <class name="testsValidation.Datepicker"/>
+      <methods>
+      <include name = "clickDatePickerlink" />
+      <include name = "checkCalenderGrid" />
+      </methods>
+    </classes>
+  </test>
+  
+  <test name="Check selection of Date">
+    <classes>
+      <class name="testsValidation.Datepicker"/>
+      <methods>
+      <include name = "clickDatePickerlink" />
+      <include name = "selectDate" />
+      </methods>
+    </classes>
+  </test>
+
+  <test name="Dropping in the target box highlights the target box">
+    <classes>
+      <class name="testsValidation.Droppable"/>
+      <methods>
+      <include name= "clickSelectablelink" />
+      <include name= "dragElementtoTarget" />
+      </methods>
+    </classes>
+  </test>
+    <test name="Dropping source element in other than Target element">
+    <classes>
+      <class name="testsValidation.Droppable"/>
+      <methods>
+      <include name= "clickSelectablelink" />
+      <include name= "dragElementToOtherSpot" />
+      </methods>
+    </classes>
+  </test>
+</suite>

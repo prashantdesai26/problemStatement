@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SelectableValidation">
+<listeners>
+		<listener class-name="com.utilities.TestListener" />
+	</listeners>
+  <test name="Check presence of Selectable blocks">
+    <classes>
+      <class name="testsValidation.Selectable"/>
+      <methods>
+      <include name = "clickSelectablelink" />
+      <include name = "checkSelectableBlock" />
+      </methods>
+    </classes>
+  </test> 
+  
+   <test name="Check all the blocks are selectable">
+    <classes>
+      <class name="testsValidation.Selectable"/>
+      <methods>
+      <include name = "clickSelectablelink" />
+      <include name = "checkBlockSelectable" />
+      </methods>
+    </classes>
+  </test> 
+  
+   <test name="Check all the blocks are selectable together">
+    <classes>
+      <class name="testsValidation.Selectable"/>
+      <methods>
+      <include name = "clickSelectablelink" />
+      <include name = "selectMultipleBlock" />
+      </methods>
+    </classes>
+  </test> 
+</suite> <!-- SelectableValidation -->

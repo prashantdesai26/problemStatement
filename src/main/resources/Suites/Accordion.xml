@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="0" name="AccordionValidaton">
+
+<listeners>
+		<listener class-name="com.utilities.TestListener" />
+	</listeners>
+  <test name="Accordion Collapse check">
+    <classes>
+  	<class name = "testsValidation.Accordion"/>
+  	<methods>
+  	<include name = "clickAccordionlink" />
+  	<include name = "checkAccordianCollapse" />
+  	</methods>
+  </classes>
+  </test> <!-- Accordion_Navigation_check -->
+  
+    <test name="Accordion Text Presence check under the collapse">
+    <classes>
+  	<class name = "testsValidation.Accordion"/>
+  	<methods>
+  	<include name = "clickAccordionlink" />
+  	<include name = "checkAccordionText" />
+  	</methods>
+  </classes>
+  </test> <!-- Accordion_Navigation_check -->
+  
+   <test name="Accordion do not collapse on second click">
+    <classes>
+  	<class name = "testsValidation.Accordion"/>
+  	<methods>
+  	<include name = "clickAccordionlink" />
+  	<include name = "checkAccordionDoNotCloseOnreclicking" />
+  	</methods>
+  </classes>
+  </test> <!-- Accordion_Navigation_check -->
+  
+</suite> <!-- AccordionValidaton -->

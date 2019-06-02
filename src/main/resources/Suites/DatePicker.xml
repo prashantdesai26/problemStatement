@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DatePicketValidation">
+<listeners>
+		<listener class-name="com.utilities.TestListener" />
+	</listeners>
+  <test name="Check the dataPicker TextBox is Present">
+    <classes>
+      <class name="testsValidation.Datepicker"/>
+      <methods>
+      <include name = "clickDatePickerlink" />
+      <include name = "clickdateselectorbox" />
+      </methods>
+    </classes>
+  </test>
+  
+  <test name="Check calender grid appears on clicking the date picker box">
+    <classes>
+      <class name="testsValidation.Datepicker"/>
+      <methods>
+      <include name = "clickDatePickerlink" />
+      <include name = "checkCalenderGrid" />
+      </methods>
+    </classes>
+  </test>
+  
+  <test name="Check selection of Date">
+    <classes>
+      <class name="testsValidation.Datepicker"/>
+      <methods>
+      <include name = "clickDatePickerlink" />
+      <include name = "selectDate" />
+      </methods>
+    </classes>
+  </test>
+</suite> <!-- DatePicketValidation -->

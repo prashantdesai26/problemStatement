@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DroppableValidation">
+<listeners>
+		<listener class-name="com.utilities.TestListener" />
+	</listeners>
+  <test name="Dropping in the target box highlights the target box">
+    <classes>
+      <class name="testsValidation.Droppable"/>
+      <methods>
+      <include name= "clickSelectablelink" />
+      <include name= "dragElementtoTarget" />
+      </methods>
+    </classes>
+  </test>
+    <test name="Dropping source element in other than Target element">
+    <classes>
+      <class name="testsValidation.Droppable"/>
+      <methods>
+      <include name= "clickSelectablelink" />
+      <include name= "dragElementToOtherSpot" />
+      </methods>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
